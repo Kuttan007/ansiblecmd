@@ -1,0 +1,1 @@
+ansible  web -b -m ansible.builtin.user -a "name=Tim state=present comment="Dummy_user" password_expire_min=10 uid=5001 shell=/sbin/nologin/ update_password=always password={{ newpassword|password_hash('sha512') }}"   --extra-vars "newpassword=sAfR2s$lpL8A
